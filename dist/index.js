@@ -25,5 +25,16 @@ let fruits = ["apples", "mangos", "oranges"];
 //fruits.push(23) flags error
 //fruits.push("litchis") ✔️
 //--------------------
-// object literals
+// object literals (explicit)
 //--------------------
+let user = {
+    firstName: "Blake",
+    age: 35,
+    id: 99,
+};
+// user.email = "blake1@blake.com" (property email does not exist)
+//--------------------
+// object literals (inference)
+//--------------------
+let person = { name: "Luigi", score: 35 };
+// person.name = true (error)
