@@ -44,3 +44,45 @@ let user: { firstName: string; age: number; id: number } = {
 //--------------------
 let person = { name: "Luigi", score: 35 };
 // person.name = true (error)
+
+//--------------------
+// regular functions
+//--------------------
+// in javascript, function parameter errors are only caught at runtime
+// in typescript, function parameters have to be assigned types amd caanot be left, to avoid the above
+
+// errors on parameters flagged
+function addTwoNumbers(a, b) {
+  return a + b;
+}
+
+// the colon after the smooth brackets is to tell ts what type must be returned from the function
+function addThreeNumbers(a: number, b: number, c: number): number {
+  return a + b + c;
+}
+
+//--------------------
+// Arrow functions
+//--------------------
+
+const subtractTwoNumbers = (a: number, b: number): number => {
+  return a - b;
+};
+
+function addAllNumbers(items: number[]) {
+  const total = items.reduce((acc, curr) => acc + curr, 0);
+  console.log(total);
+}
+addAllNumbers([5, 7, 9, 11, 3, 2, 1]);
+
+//--------------------
+// return type inference
+//--------------------
+
+function formatGreeting(name: string, greeting: string) {
+  return `${greeting} ${name}`;
+}
+// hovering over result will show the return type is a string
+const result = formatGreeting("blake", "hello");
+// type was infered above, so we now get an error below
+const errorMessage = formatGreeting("William", 9);
