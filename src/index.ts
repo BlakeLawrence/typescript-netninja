@@ -1,3 +1,7 @@
+//to watch index js and index ts file, open 2 terminals with following commands:
+// terminal 1: tsc --watch
+// terminal 2: node --watch dist/index.js
+
 let firstName: string = "Mario";
 let isFictional: boolean;
 
@@ -52,9 +56,9 @@ let person = { name: "Luigi", score: 35 };
 // in typescript, function parameters have to be assigned types amd caanot be left, to avoid the above
 
 // errors on parameters flagged
-function addTwoNumbers(a, b) {
-  return a + b;
-}
+// function addTwoNumbers(a, b) {
+//   return a + b;
+// }
 
 // the colon after the smooth brackets is to tell ts what type must be returned from the function
 function addThreeNumbers(a: number, b: number, c: number): number {
@@ -85,4 +89,4 @@ function formatGreeting(name: string, greeting: string) {
 // hovering over result will show the return type is a string
 const result = formatGreeting("blake", "hello");
 // type was infered above, so we now get an error below
-const errorMessage = formatGreeting("William", 9);
+// const errorMessage = formatGreeting("William", 9);

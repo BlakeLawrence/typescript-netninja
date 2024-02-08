@@ -1,4 +1,7 @@
 "use strict";
+//to watch index js and index ts file, open 2 terminals with following commands:
+// terminal 1: tsc --watch
+// terminal 2: node --watch dist/index.js
 let firstName = "Mario";
 let isFictional;
 firstName = "Luigi";
