@@ -94,3 +94,24 @@ function addTogether(value, value2) {
     return value + value2;
 }
 console.log(addTogether("hello", 3));
+//----------------
+// Tuples
+//----------------
+//tuples are an array of values of diffrent types in a specific order
+let personOne = ["blake", 35, false];
+//tuples arent typically an aproach you'd reach for, but there are some cases that thye are very good, where things are alwasy the same (co-ordinates, color keys etc.) eg below
+//hue, saturation, luminance and alpha (color key)
+let hsla;
+hsla = [255, "50%", "34%", 2];
+//co-ordinates could be a good use too
+let xy;
+xy = [799.23, 77.1];
+//-------------
+// named tuples
+//-------------
+// in the past, unless you knew what the values in a tuple were for, it could be hard to figure out what they are emant to be. named tuples help provide context
+// named tuples were released with ts version 4
+let userOne;
+// This may be a bit confusing because it looks like an object with keys and values within an array
+// but in this case, it is purely an identifier to let the developer know what it is (it has no effect, almost as if its a comment)
+userOne = ["Blake", 35];
