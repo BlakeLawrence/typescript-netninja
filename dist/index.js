@@ -47,9 +47,9 @@ let person = { name: "Luigi", score: 35 };
 // in javascript, function parameter errors are only caught at runtime
 // in typescript, function parameters have to be assigned types amd caanot be left, to avoid the above
 // errors on parameters flagged
-function addTwoNumbers(a, b) {
-    return a + b;
-}
+// function addTwoNumbers(a, b) {
+//   return a + b;
+// }
 // the colon after the smooth brackets is to tell ts what type must be returned from the function
 function addThreeNumbers(a, b, c) {
     return a + b + c;
@@ -74,4 +74,23 @@ function formatGreeting(name, greeting) {
 // hovering over result will show the return type is a string
 const result = formatGreeting("blake", "hello");
 // type was infered above, so we now get an error below
-const errorMessage = formatGreeting("William", 9);
+// const errorMessage = formatGreeting("William", 9);
+//----------------
+// Any - try avoid as it defeats the obhect of typescript
+//----------------
+//you can explicitly assign the type of any to a variable
+let age;
+age = 30;
+age = "40";
+//or if you declare a variable without assigning it an initial value, it will be type of any be default
+let title;
+title = 45;
+title = "hello world";
+//any with arrays
+let things = [2, "hello", true];
+things.push(33);
+// any with functions
+function addTogether(value, value2) {
+    return value + value2;
+}
+console.log(addTogether("hello", 3));

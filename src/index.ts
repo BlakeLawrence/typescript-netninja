@@ -90,3 +90,25 @@ function formatGreeting(name: string, greeting: string) {
 const result = formatGreeting("blake", "hello");
 // type was infered above, so we now get an error below
 // const errorMessage = formatGreeting("William", 9);
+
+//----------------
+// Any - try avoid as it defeats the obhect of typescript
+//----------------
+//you can explicitly assign the type of any to a variable
+let age: any;
+age = 30;
+age = "40";
+//or if you declare a variable without assigning it an initial value, it will be type of any be default
+let title;
+title = 45;
+title = "hello world";
+
+//any with arrays
+let things: any[] = [2, "hello", true];
+things.push(33);
+
+// any with functions
+function addTogether(value: any, value2: any): any {
+  return value + value2;
+}
+console.log(addTogether("hello", 3));
