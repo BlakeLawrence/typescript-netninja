@@ -115,3 +115,8 @@ let userOne;
 // This may be a bit confusing because it looks like an object with keys and values within an array
 // but in this case, it is purely an identifier to let the developer know what it is (it has no effect, almost as if its a comment)
 userOne = ["Blake", 35];
+//-------------
+// Interfaces
+//-------------
+// interfacse are a way to create our own custom types
+// in a nutshell, they are a way to define certain structures that other data sructures can adhere to.
