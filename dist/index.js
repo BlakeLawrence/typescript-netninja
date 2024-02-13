@@ -119,4 +119,4 @@ userOne = ["Blake", 35];
 // Interfaces
 //-------------
 // interfacse are a way to create our own custom types
-// in a nutshell, they are a way to define certain structures that other data sructures can adhere to.
+// in a nutshell, tuples are a way to define certain structures that other data sructures can adhere to.

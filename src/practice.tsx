@@ -10,3 +10,6 @@ function wordConcat(item1: string, item2: string): string {
   return item1 + item2;
 }
 wordConcat("blake", "lawrence");
+
+let rhyme: string[] = ["fee", "fi", "fo", "fum"];
+let reverseRhyme = rhyme.map((item) => item.split("").reverse().join(""));
