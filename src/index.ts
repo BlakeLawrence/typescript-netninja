@@ -145,3 +145,23 @@ userOne = ["Blake", 35];
 //-------------
 // interfacse are a way to create our own custom types
 // in a nutshell, tuples are a way to define certain structures that other data sructures can adhere to.
+interface Author {
+  name: string;
+  avatar: string;
+}
+
+const authorOne: Author = { name: "mario", avatar: "./mario.png" };
+
+interface Post {
+  title: string;
+  body: string;
+  tags: string[];
+  author: Author;
+}
+
+const newPost: Post = {
+  title: "Hello world",
+  body: "interesting article",
+  tags: ["tech", "gadgets", "new job"],
+  author: authorOne,
+};
